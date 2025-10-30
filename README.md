@@ -67,6 +67,244 @@ Fluxo conceitual em contexto (exemplo de pedido pelo garçom):
 
 - O cliente atualiza a interface (exibindo confirmação ou detalhes do pedido).
 
+### Identidade Visual
+
+#### Paleta de Cores
+
+| Nome | Código HEX | Uso Principal |
+|------|------------|---------------|
+| Primária | #007E85 | Botões, links, bordas |
+| BlackLight | #1C1B1F | Bordas de inputs e placeholders |
+| Neutro claro | #C3C3C3 | Textos principais |
+| Black | #000000 | Textos principais |
+| Error | #EE0202 | Erros, alertas críticoss |
+| White | #FFFFFF | Backgrounds da tela e de cards |
+
+#### 🖋️ Tipografia
+
+| Tipo | Fonte Principal | Peso | Uso |
+|------|----------------|------|-----|
+| Títulos | Poppins | Bold | Textos principais |
+| Corpo | Poppins | SemiBold | Textos botoes e links|
+| Auxiliar | Poppins | Regular | Textos secundarios, fonte dos inputs |
+
+
+### Componentes UI
+
+#### Botões
+
+| Variante | Cor | Borda | Texto | Uso |
+|----------|-----|-------|-------|-----|
+| Primário | #2A9D8F | 4px | Branco | Ações principais (ex: criar conta, login confirmar) |
+| Secundário | #EE0202 | 15px | Branco | Ações de exclusão e cancelamento |
+| Desabilitado | #D1D5DB | Não | #9CA3AF | Estados inativos |
+
+#### Inputs
+- Bordas arredondadas 8px
+- Altura: 66px
+- Placeholder em cinza (#1C1B1F)
+- Types: Text, Password, Email, Date, Select
+
+#### Cards
+- Fundo: #FFFFFF
+- Borda: 1px sólida #007E85
+- Bordas arredondadas 10px
+- Espaçamento interno: 16px
+
+### 🧭 Ícones
+- Tamanho padrão: 24px
+- Cores: herdam cor do texto
+
+#### Tabela de Ícones do Sistema
+
+| Ícone | Nome | Uso |
+|-------|------|-----|
+| ![Close Icon](images/Close%20Icon.png) | Fechar | Usado para fechar modais, popups e painéis |
+| ![Variant2-1](images/Property%201=Variant2%20(1).png) | Home | Usado para navegar para a tela principal do sistema. |
+| ![Variant2](images/Property%201=Variant2.png) | Home disable | Usado para indicar quando a tela principal do sistema nao estiver em foco |
+| ![Variant2-3](images/Property%201=Variant2%20(3).png) | Consulta | Usado para navegar para a tela de agendamento de consulta |
+| ![Variant2-5](images/Property%201=Variant2%20(5).png) | User | Usado para navegar para a de "perfil do usario". |
+| ![Variant2-4](images/Property%201=Variant2%20(4).png) | User disable | Usado para indicar quando a tela de "perfil do usario"  nao estiver em foco |
+
+#### Figma (identidade visual)
+https://www.figma.com/design/DELb8SaO8BEH8Tg76sCR5A/Sem-t%C3%ADtulo?node-id=0-1&t=5FDMdnoNLkkNTrQK-1
+
+### 👥 Jornada do Usuário
+
+#### Dono
+- Se cadastra
+- Cria os objetos do restaurante
+- Cadastra gerente e garçons 
+
+#### Gerente
+- Cadastra garçons 
+- Edita os objetos do restaurante
+- Gerencia pedidos
+- Gerencia garçons
+
+#### Garçons
+- Atribui cliente a mesa
+- Cria pedido 
+- Edita pedido
+- Cancela pedido
+
+#### Figma (jornada do usuário)
+https://www.figma.com/design/b9HuaHdyiE8sYG3BYNUW3a/Untitled?node-id=0-1&p=f&t=uvlOPM4u5bNzP3ZR-0
+
+## 🛠️ Tecnologias
+
+## Frontend
+- **Next.JS**: Framework principal para desenvolvimento do frontend
+- **Axios**: Para comunicação com a API
+
+## Mobile
+- **Flutter**: Framework para desenvolvimento Mobile
+
+## BackEnd
+### Requisitos de Segurança
+- *OAuth2*: Utilizado para autenticação e autorização segura dos usuários.
+- *HTTPS*: Protocolo de comunicação para garantir a segurança dos dados transmitidos.
+- *JWT (JSON Web Tokens)*: Para gerenciar sessões de usuários de forma segura.
+
+### Protocolo de Comunicação
+- *API REST*: Utilizaremos HTTP para comunicação entre os serviços.
+
+### Tecnologias Utilizadas
+- *Java com Spring Boot (versão 21)*: Framework principal para desenvolvimento do backend.
+- *JPA (Java Persistence API)*: Para comunicação com o banco de dados.
+- *Lombok*: Para reduzir a verbosidade do código e agilizar o desenvolvimento
+
+## Banco de Dados
+- **MongoDB**: Escolhido pois atende os requisitos do sistema
+
+### Nomenclatura
+
+- **Tabelas**: nomes no plural, com inicial maiúscula, representando entidades do domínio (ex: `Usuarios`, `Pacientes`, `Consultas`).
+
+###  Tabela `User`
+
+| Campo       | Tipo       | Descrição |
+|--------------|-------------|-----------|
+| `_id`        | objectid    | Identificador único do usuário |
+| `_class`     | string      | Classe do documento |
+| `lastName`   | string      | Sobrenome do usuário |
+| `name`       | string      | Nome do usuário |
+| `password`   | string      | Senha do usuário |
+| `role`       | string      | Função do usuário (ex: admin, garçom, etc.) |
+| `username`   | string      | Nome de usuário |
+| `birthDate`  | isodate     | Data de nascimento |
+
+---
+
+###  Tabela `Cardapio`
+
+| Campo      | Tipo     | Descrição |
+|-------------|-----------|-----------|
+| `_id`       | objectid  | Identificador único do item |
+| `descricao` | string    | Descrição do prato |
+| `nome`      | string    | Nome do prato |
+| `preco`     | string    | Preço do prato |
+| `_class`    | string    | Classe do documento |
+
+---
+
+###  Tabela `Pedido`
+
+| Campo                                   | Tipo       | Descrição |
+|----------------------------------------|-------------|-----------|
+| `_id`                                  | objectid    | Identificador único do pedido |
+| `_class`                               | string      | Classe do documento |
+| `dataHora`                             | isodate     | Data e hora do pedido |
+| `entregaConfirmada`                    | boolean     | Indica se a entrega foi confirmada |
+| `itens`                                | list        | Lista de itens do pedido |
+| `itens.nome`                           | string      | Nome do item |
+| `itens.quantidade`                     | int32       | Quantidade do item |
+| `mesa`                                 | string      | Identificação da mesa |
+| `nomeCliente`                          | string      | Nome do cliente |
+| `pago`                                 | boolean     | Indica se o pedido foi pago |
+| `status`                               | string      | Status atual do pedido |
+| `garcomEntrega`                        | string      | Nome do garçom responsável pela entrega |
+| `tempoDePreparo`                       | int64       | Tempo de preparo em milissegundos |
+| `historicoDeTrocaDeStatus`             | object      | Histórico das mudanças de status |
+| `historicoDeTrocaDeStatus.CRIADO`      | isodate     | Data de criação do pedido |
+| `historicoDeTrocaDeStatus.EM_PREPARO`  | isodate     | Data de início do preparo |
+| `historicoDeTrocaDeStatus.FINALIZADO`  | isodate     | Data de finalização |
+| `historicoDeTrocaDeStatus.PRONTO`      | isodate     | Data de quando ficou pronto |
+
+---
+
+###  Tabela `Mesas`
+
+| Campo       | Tipo     | Descrição |
+|--------------|-----------|-----------|
+| `_id`        | objectid  | Identificador único da mesa |
+| `_class`     | string    | Classe do documento |
+| `capacidade` | int32     | Capacidade máxima da mesa |
+| `nome`       | string    | Nome da mesa |
+| `numero`     | string    | Número da mesa |
+| `status`     | string    | Status atual (livre, ocupada, reservada etc.) |
+
+---
+
+###  Tabela `Pagamentos`
+
+| Campo            | Tipo      | Descrição |
+|------------------|------------|-----------|
+| `_id`            | objectid   | Identificador único do pagamento |
+| `_class`         | string     | Classe do documento |
+| `dataFechamento` | isodate    | Data de fechamento do pagamento |
+| `mesa`           | string     | Mesa associada ao pagamento |
+| `metodoPagamento`| string     | Método de pagamento (ex: dinheiro, cartão) |
+| `valorTotal`     | string     | Valor total pago |
+
+---
+
+###  Tabela `Historico Pagamento`
+
+| Campo               | Tipo      | Descrição |
+|----------------------|------------|-----------|
+| `_id`                | objectid   | Identificador único do registro |
+| `_class`             | string     | Classe do documento |
+| `dataHora`           | isodate    | Data e hora do registro |
+| `itens`              | list       | Lista de itens pagos |
+| `itens.nome`         | string     | Nome do item |
+| `itens.quantidade`   | int32      | Quantidade do item |
+| `itens.valorUnitario`| string     | Valor unitário do item |
+| `mesa`               | string     | Mesa associada |
+| `metodoPagamento`    | string     | Método de pagamento |
+| `valorTotal`         | string     | Valor total pago |
+
+
+
+## Governança do Design System
+
+A governança do Design System é essencial para assegurar sua consistência, evolução contínua e adoção adequada pelas equipes. Para o Sistema de gestão de cozinha, estabelecemos as seguintes diretrizes:
+
+### Responsáveis
+
+- **Squad de Design System**: formado por representantes de design, frontend e arquitetura.
+- **Designers e Desenvolvedores de cada squad**: responsáveis por propor novos componentes e colaborar com manutenções.
+
+### Processo de Atualização
+
+1. **Proposição**: novos componentes ou alterações são sugeridos via Pull Request em repositório dedicado.
+2. **Revisão**: a equipe de governança avalia a aderência às diretrizes de acessibilidade, responsividade, padronização e reuso.
+3. **Documentação**: cada alteração é enviada para o github, todos os devs tem liberdade para alteração desde que esteja de acordo com as diretrizes do projeto.
+
+### Boas Práticas
+
+- Nomeação clara e consistente de componentes.
+- Testes  para todos os componentes (visuais e unitários).
+- Revisões quinzenais do sistema para identificar componentes obsoletos ou duplicados.
+
+
+### Ciclo de Revisão
+
+- **Mensal**: revisão geral da biblioteca para garantir consistência.
+- **Semestral**: atualização de tokens de identidade visual, quando necessário.
+- **Sob demanda**: atualização de componentes com base em feedbacks das equipes ou necessidade de novos fluxos.
+
+
 A aplicação do MVC tem como vantagens a organização interna do código e melhor manutenibilidade (facilita evolução do código sem impacto cruzado). Além disso, permite a reutilização do servidor para diferentes tipos de cliente (tablet do garçom, painel do caixa, dashboard do gerente) e é consistente e seguro (validações, permissões e logs centralizados no servidor).
 
 
