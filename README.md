@@ -30,7 +30,7 @@ Dessa forma, o sistema pode ser acessado tanto por dispositivos móveis utilizad
 O padrão arquitetural adotado será o **MVC (Model-View-Controller)**, visando uma separação clara entre regras de negócio, lógica de apresentação e manipulação de dados. Isso facilita a evolução do sistema e promove um desenvolvimento mais organizado.
 
 ## Desenho Arquitetural
-![Close Icon](images/microservice.drawio.png) <br/>
+![Close Icon](imagens/cliente_servidor.jpeg) <br/>
 O diagrama representa o estilo arquitetural baseado em Cliente-Servidor, no qual existe uma separação física e lógica entre:
 
 Cliente – onde ocorre a interação do usuário (garçom, caixa, gerente);
@@ -38,3 +38,6 @@ Cliente – onde ocorre a interação do usuário (garçom, caixa, gerente);
 Servidor – onde residem as regras de negócio, o processamento e o armazenamento dos dados.
 
 Dentro do lado servidor, a aplicação segue o padrão arquitetural MVC (Model–View–Controller), o que organiza internamente o código em camadas com responsabilidades bem definidas.
+
+
+![Close Icon](imagens/logob.png) <br/>
