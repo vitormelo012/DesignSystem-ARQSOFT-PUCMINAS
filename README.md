@@ -45,11 +45,11 @@ Dentro do lado servidor, a aplicação segue o padrão arquitetural MVC (Model�
 
 Como o MVC se encaixa no lado servidor:
 
-A Camada Função no contexto do sistema
-O **Model**	Representa entidades como Pedido, Item, Mesa, Usuário; implementa regras como status do pedido, vínculo com cozinha, persistência em banco.
-O **View**	Responsável pelas respostas devolvidas aos clientes (ex.: JSON em APIs REST, páginas no painel web administrativo, ou templates).
-O **Controller**	Recebe requisições externas, orquestra modelos, aplica validações de entrada e devolve a resposta adequada.
-Benefícios dessa combinação
+- O **Model**	Representa entidades como Pedido, Item, Mesa, Usuário; implementa regras como status do pedido, vínculo com cozinha, persistência em banco.
+
+- O **View**	Responsável pelas respostas devolvidas aos clientes (ex.: JSON em APIs REST, páginas no painel web administrativo, ou templates).
+
+- O **Controller**	Recebe requisições externas, orquestra modelos, aplica validações de entrada e devolve a resposta adequada.
 
 Fluxo conceitual em contexto (exemplo de pedido pelo garçom):
 
@@ -149,7 +149,7 @@ https://www.figma.com/design/DELb8SaO8BEH8Tg76sCR5A/Sem-t%C3%ADtulo?node-id=0-1&
 - Cancela pedido
 
 #### Figma (jornada do usuário)
-https://www.figma.com/design/b9HuaHdyiE8sYG3BYNUW3a/Untitled?node-id=0-1&p=f&t=uvlOPM4u5bNzP3ZR-0
+https://www.figma.com/design/DELb8SaO8BEH8Tg76sCR5A/Identidade-visual?node-id=0-1&m=dev&t=5AaTTuUEe2Guk8dv-1
 
 ## 🛠️ Tecnologias
 
