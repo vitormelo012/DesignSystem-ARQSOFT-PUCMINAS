@@ -41,7 +41,7 @@ O estilo em questão premite a escalabilidade e centralização. Filiais e dispo
 
 Dentro do lado servidor, a aplicação segue o padrão arquitetural MVC (Model–View–Controller), o que organiza internamente o código em camadas com responsabilidades bem definidas.
 
-![Close Icon](imagens/mvc.jpg) <br/>
+![Close Icon](imagens/MVC.jpg) <br/>
 
 Como o MVC se encaixa no lado servidor:
 
