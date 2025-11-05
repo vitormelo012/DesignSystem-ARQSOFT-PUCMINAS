@@ -72,59 +72,38 @@ Fluxo conceitual em contexto (exemplo de pedido pelo garçom):
 #### Paleta de Cores
 
 | Nome | Código HEX | Uso Principal |
-|------|------------|---------------|
-| Primária | #007E85 | Botões, links, bordas |
-| BlackLight | #1C1B1F | Bordas de inputs e placeholders |
-| Neutro claro | #C3C3C3 | Textos principais |
-| Black | #000000 | Textos principais |
-| Error | #EE0202 | Erros, alertas críticoss |
-| White | #FFFFFF | Backgrounds da tela e de cards |
+|:---|:---|:---|
+| Primária | #66CC33 | Backgrounds de cards, tags, botões de categoria |
+| Secundária | #F0E600 | Botões de ação principais (Login, Adicionar) |
+| Neutro Claro | #B2D900 | (Cor de suporte) |
+| Neutro (Escuro) | #007E85 | (Cor de suporte) |
+| Black | #000000 | Textos (sobre fundos claros/amarelos) |
+| White | #FFFFFF | Textos (sobre fundos verdes) |
+| Error | #EE0202 | Erros, alertas críticos |
 
 #### 🖋️ Tipografia
 
 | Tipo | Fonte Principal | Peso | Uso |
-|------|----------------|------|-----|
-| Títulos | Poppins | Bold | Textos principais |
-| Corpo | Poppins | SemiBold | Textos botoes e links|
-| Auxiliar | Poppins | Regular | Textos secundarios, fonte dos inputs |
-
+|:---|:---|:---|:---|
+| Títulos | Poppins | Semibold | Títulos (ex: "Cozinha conecta") |
+| Corpo | Poppins | Medium | Textos de ênfase |
+| Auxiliar | Poppins | Regular | Textos gerais |
 
 ### Componentes UI
 
 #### Botões
 
-| Variante | Cor | Borda | Texto | Uso |
-|----------|-----|-------|-------|-----|
-| Primário | #2A9D8F | 4px | Branco | Ações principais (ex: criar conta, login confirmar) |
-| Secundário | #EE0202 | 15px | Branco | Ações de exclusão e cancelamento |
-| Desabilitado | #D1D5DB | Não | #9CA3AF | Estados inativos |
-
-#### Inputs
-- Bordas arredondadas 8px
-- Altura: 66px
-- Placeholder em cinza (#1C1B1F)
-- Types: Text, Password, Email, Date, Select
+| Variante | Cor de Fundo | Cor do Texto | Uso |
+|:---|:---|:---|:---|
+| Primário (Ação) | #F0E600 | #000000 | Ações principais (ex: Login, Adicionar item, Detalhes) |
+| Secundário (Tag) | #66CC33 | #FFFFFF | Tags, Categorias (ex: Cardápio, Mesa) |
 
 #### Cards
-- Fundo: #FFFFFF
-- Borda: 1px sólida #007E85
-- Bordas arredondadas 10px
-- Espaçamento interno: 16px
+* Fundo: #66CC33
+* Borda: Nenhuma
+* Bordas arredondadas: ~10px
+* Cor do texto principal: #FFFFFF
 
-### 🧭 Ícones
-- Tamanho padrão: 24px
-- Cores: herdam cor do texto
-
-#### Tabela de Ícones do Sistema
-
-| Ícone | Nome | Uso |
-|-------|------|-----|
-| ![Close Icon](images/Close%20Icon.png) | Fechar | Usado para fechar modais, popups e painéis |
-| ![Variant2-1](images/Property%201=Variant2%20(1).png) | Home | Usado para navegar para a tela principal do sistema. |
-| ![Variant2](images/Property%201=Variant2.png) | Home disable | Usado para indicar quando a tela principal do sistema nao estiver em foco |
-| ![Variant2-3](images/Property%201=Variant2%20(3).png) | Consulta | Usado para navegar para a tela de agendamento de consulta |
-| ![Variant2-5](images/Property%201=Variant2%20(5).png) | User | Usado para navegar para a de "perfil do usario". |
-| ![Variant2-4](images/Property%201=Variant2%20(4).png) | User disable | Usado para indicar quando a tela de "perfil do usario"  nao estiver em foco |
 
 #### Figma (identidade visual)
 https://www.figma.com/design/DELb8SaO8BEH8Tg76sCR5A/Sem-t%C3%ADtulo?node-id=0-1&t=5FDMdnoNLkkNTrQK-1
@@ -179,7 +158,7 @@ https://www.figma.com/design/DELb8SaO8BEH8Tg76sCR5A/Identidade-visual?node-id=0-
 
 ### Nomenclatura
 
-- **Tabelas**: nomes no plural, com inicial maiúscula, representando entidades do domínio (ex: `Usuarios`, `Pacientes`, `Consultas`).
+- **Tabelas**: nomes no plural, com inicial maiúscula, representando entidades do domínio.
 
 ###  Tabela `User`
 
